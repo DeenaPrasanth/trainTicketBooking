@@ -10,9 +10,11 @@ class EmailController extends Controller
 {
     public function index()
     {
+        $data = "hiddd";
         $testMailData = [
             'title' => 'Ticket Booking',
-            'body' => 'This is the body of test email.'
+            'body' => 'Your Train Booking is confirmed. Your Train Number is' .$data.'',
+            'name' => $data
         ];
 
         Mail::to('deena.nplus@gmail.com')->send(new SendMail($testMailData));
