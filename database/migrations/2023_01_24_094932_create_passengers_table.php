@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('passengers', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->bigIncrements('id')->unsigned();
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
+            $table->string('age')->nullable();
             $table->string('address')->nullable();
             $table->timestamps();
         });

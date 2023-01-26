@@ -14,14 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('availability', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->bigIncrements('id')->unsigned();
             $table->string('train_no')->nullable();
             $table->string('start_time')->nullable();
             $table->string('end_time')->nullable();
             $table->string('start_date')->nullable();
             $table->string('end_date')->nullable();
             $table->string('status')->nullable();
-            $table->foreign('train_no')->references('id')->on('trains')->onDelete('cascade');
             $table->timestamps();
         });
     }

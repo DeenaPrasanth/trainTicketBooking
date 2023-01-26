@@ -22,10 +22,7 @@
     <div class="menu-body">
         <div class="dropdown">
             <a href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
-                <div class="avatar me-3">
-                    <img src="{{ asset('backend/assets/images/user/man_avatar3.jpg') }}" 
-                         class="rounded-circle" alt="image">
-                </div>
+               
                 <div>
                     <div class="fw-bold"> Welcome,{{ auth()->user() ? auth()->user()->name: '' }} !!!</div>
                 </div>
@@ -61,57 +58,6 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            
-            <li>
-                <a href="#">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-truck"></i>
-                    </span>
-                    <span>Products</span>
-                </a>
-                <ul>
-                    <li>
-                        <a  href="product-list.html">List
-                            View</a>
-                    </li>
-                    <li>
-                        <a  href="product-grid.html">Grid
-                            View</a>
-                    </li>
-                    <li>
-                        <a  href="product-detail.html">Product Detail</a>
-                    </li>
-                    <li>
-                        <a  href="shopping-cart.html">Shopping
-                            Cart</a>
-                    </li>
-                    <li>
-                        <a  href="checkout.html">Checkout</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-wallet2"></i>
-                    </span>
-                    <span>Buyer</span>
-                </a>
-                <ul>
-                    <li>
-                        <a href="buyer-dashboard.html">Dashboard</a>
-                    </li>
-                    <li>
-                        <a  href="buyer-orders.html">Orders</a>
-                    </li>
-                    <li>
-                        <a  href="buyer-addresses.html">Addresses</a>
-                    </li>
-                    <li>
-                        <a  href="buyer-wishlist.html">Wishlist</a>
-                    </li>
-                </ul>
-            </li>
             <li>
                 <a  href="{{ route('booking') }}">
                     <span class="nav-link-icon">
@@ -128,10 +74,7 @@
                     </span>
                     <span>Passengers</span>
                 </a>
-                <ul>
-                    <li><a  href="user-list.html">List View</a></li>
-                    <li><a  href="user-grid.html">Grid View</a></li>
-                </ul>
+                
             </li>
           
          

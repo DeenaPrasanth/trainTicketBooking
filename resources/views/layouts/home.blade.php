@@ -566,9 +566,23 @@
     <img width="100" src="https://vetra.laborasyon.com/assets/images/logo.svg" alt="logo">
 </a>
 <!-- ./ Logo -->
-<div class="page-title">Ticket Booking </div>
+<div class="page-title">Upcoming Trains </div>
 
-
+<div class="header-bar ms-auto">
+    <ul class="navbar-nav justify-content-end">
+        <li class="nav-item">
+            <a href="{{route('login') }}" class="btn btn-info" >
+                Login
+            </a>
+        </li>
+        <br>
+        <li class="nav-item">
+            <a href="{{route('register-user') }}" class="btn btn-secondary" >
+                Register
+            </a>
+        </li>
+    </ul>
+</div>
 <!-- Header mobile buttons -->
 <div class="header-mobile-buttons">
     <a href="#" class="search-bar-btn">

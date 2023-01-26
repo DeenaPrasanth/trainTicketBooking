@@ -20,6 +20,7 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <th scope="col">NO</th>
                 <th scope="col">Passenger</th>
                 <th scope="col">Train</th>
+                <th scope="col">Status</th>
                 <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -29,14 +30,24 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <td>{{++$key}}</td>
                 <td>{{$value->passenger->name}}</td>
                 <td>{{$value->train->name}}</td>
+                <td>@if($value->confirm == 1)
+                            Confirm
+                    @elseif($value->cancelled == 1)
+                            cancelled
+                    @else
+                            Pending
+                    @endif
+                    </td>
                 <td>
+                @if($value->confirm == 0 && $value->cancelled == 0)
                     <a  href="{{ route('confirmTicket',$value->id) }}"title="Show">
                         <button type="button" class="btn btn-success">Confirm</button>
                     </a>
                                                     
                     <a href="{{ route('cancelTicket',$value->id) }}" title="Edit">
                         <button type="button" class="btn btn-danger">Cancel</button>
-                    </a>            
+                    </a>   
+                    @endif         
                 </td>
                 </tr>
                 @endforeach

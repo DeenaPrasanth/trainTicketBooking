@@ -8,22 +8,6 @@
 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav">
-@guest
-<li class="nav-item">
-<a class="nav-link" href="{{ route('login') }}">Login</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="{{ route('register-user') }}">Register</a>
-</li>
-@else
-<li class="nav-item">
-<a class="nav-link" href="{{ route('signout') }}">Logout</a>
-</li>
-@endguest
-</ul>
-</div>
 </div>
 </nav>
 @yield('content')
@@ -36,6 +20,7 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <th scope="col">Train </th>
         <th scope="col">Train NO</th>
         <th scope="col">Available Seats</th>
+        <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -45,7 +30,11 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <td>{{$value->name}}</td>
         <td>{{$value->train_number}}</td>
         <td>{{$value->available_seats}}</td>
-        <td><button type="button" class="btn btn-success">Book Ticket</button></td>
+        <td>
+            <a href="{{ route('ticket_booking',$value->id) }}" >
+                <button  class="btn btn-success">Book now</button>
+            </a>
+        </td>
         </tr>
         @endforeach
     </tbody>

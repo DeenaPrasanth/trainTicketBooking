@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('trains', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->bigIncrements('id')->unsigned();
             $table->string('name')->nullable();
             $table->string('train_number')->nullable();
             $table->string('available_seats')->nullable();

@@ -10,5 +10,5 @@ class Passenger extends Model
     use HasFactory;
     protected $table='passengers';  
     protected $fillable=  
-       ['name','email','phone','address'];  
+       ['name','email','phone','address','age'];  
 }  

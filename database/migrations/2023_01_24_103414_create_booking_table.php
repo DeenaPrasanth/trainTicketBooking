@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('booking', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->bigIncrements('id')->unsigned();
             $table->integer('passenger_id');
             $table->integer('availability_id')->nullable();
             $table->string('status')->nullable();
