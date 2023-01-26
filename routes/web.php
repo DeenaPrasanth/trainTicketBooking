@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\DashboardController; 
+use App\Http\Controllers\BookingController; 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,5 +21,8 @@ Route::get('signup', [CustomAuthController::class, 'registration'])->name('regis
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
+Route::get('booking', [BookingController::class, 'index'])->name('booking'); 
+Route::get('confirm/{id}',[BookingController::class,'confirmTicket'])->name('confirmTicket');
+Route::get('cancel/{id}',[BookingController::class,'cancelTicket'])->name('cancelTicket');
 //mail
 Route::get('/send-email', [EmailController::class, 'index']);
