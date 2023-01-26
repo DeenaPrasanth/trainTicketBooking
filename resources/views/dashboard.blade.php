@@ -53,7 +53,7 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         </tr>
         @endforeach
     </tbody>
-    </table>
+</table>
 </div>
 
 </div>

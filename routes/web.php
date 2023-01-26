@@ -12,7 +12,7 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('dashboard', [DashboardController::class, 'dashboard']); 
+Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard'); 
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
 Route::get('signup', [CustomAuthController::class, 'registration'])->name('register-user');
