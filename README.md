@@ -79,7 +79,11 @@ To allow Laravel to connect to the email
 - MAIL_ENCRYPTION=tls
 - MAIL_FROM_ADDRESS=your_email
 - MAIL_FROM_NAME="${APP_NAME}"
-- 
+
+The Live Wire asset will be depends on .env in LIVEWIER_URL like [LIVEWIER_URL=http://localhost/project_name/public]
+ - LIVEWIER_URL=http://localhost/project_name/public
+ 
+ 
 Depending on your application, you might need to make some changes to your app.php file in the config folder such as the timezone. If you do make any changes be sure to flush the cache.
 
  - php artisan optimize:clear
