@@ -68,7 +68,7 @@
             </li>
           
             <li>
-                <a href="#">
+                <a href="{{ route('passenger') }}">
                     <span class="nav-link-icon">
                         <i class="bi bi-person-circle"></i>
                     </span>

@@ -40,11 +40,11 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     </td>
                 <td>
                 @if($value->confirm == 0 && $value->cancelled == 0)
-                    <a  href="{{ route('confirmTicket',$value->id) }}"title="Show">
+                    <a  href="{{ route('confirmTicket',$value->id) }}">
                         <button type="button" class="btn btn-success">Confirm</button>
                     </a>
                                                     
-                    <a href="{{ route('cancelTicket',$value->id) }}" title="Edit">
+                    <a href="{{ route('cancelTicket',$value->id) }}">
                         <button type="button" class="btn btn-danger">Cancel</button>
                     </a>   
                     @endif         

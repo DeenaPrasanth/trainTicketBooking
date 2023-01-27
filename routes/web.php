@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\DashboardController; 
 use App\Http\Controllers\BookingController; 
+use App\Http\Controllers\PassengerController;
 use App\Models\Train;
 
 /*
@@ -32,4 +33,5 @@ Route::post('store', [BookingController::class, 'store'])->name('booking_store')
 Route::get('confirm/{id}',[BookingController::class,'confirmTicket'])->name('confirmTicket');
 Route::get('cancel/{id}',[BookingController::class,'cancelTicket'])->name('cancelTicket');
 //mail
+Route::get('passenger', [PassengerController::class, 'index'])->name('passenger'); 
 Route::get('/send-email', [EmailController::class, 'index']);
