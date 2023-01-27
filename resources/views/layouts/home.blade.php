@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/libs/animate/animate.min.css') }}" type="text/css">
 
     
-
+    @livewireStyles
     <style>
         .form-group.required .col-form-label:after {
                     content:" *";
@@ -563,7 +563,7 @@
 </div>
 <!-- Logo -->
 <a href="index.html" class="logo">
-    <img width="100" src="https://vetra.laborasyon.com/assets/images/logo.svg" alt="logo">
+    <!-- <img width="100" src="https://vetra.laborasyon.com/assets/images/logo.svg" alt="logo"> -->
 </a>
 <!-- ./ Logo -->
 <div class="page-title">Upcoming Trains </div>
@@ -604,7 +604,7 @@
         <div class="menu">
     <div class="menu-header">
         <a href="index.html" class="menu-header-logo">
-            <img src="https://vetra.laborasyon.com/assets/images/logo.svg" alt="logo">
+            <!-- <img src="https://vetra.laborasyon.com/assets/images/logo.svg" alt="logo"> -->
         </a>
         <a href="index.html" class="btn btn-sm menu-close-btn">
             <i class="bi bi-x"></i>
@@ -643,10 +643,7 @@
     </div>
     <!-- /page content -->
 
-</body>
 
-
-</html>
 
 <script>
     var message = "{{session()->get('message')}}";
@@ -675,6 +672,7 @@
    
     
 </script>
+@livewireScripts
 <script src="{{ asset('backend/assets/libs/charts/apex/apexcharts.min.js') }}"></script>
 <script src="{{ asset('backend/assets/js/buyer-dashboard.js') }}"></script>
 <script src="{{ asset('backend/assets/js/app.min.js') }}"></script>
@@ -693,4 +691,7 @@
 
 <!-- Prism -->
 <script src="{{ asset('backend/assets/libs/prism/prism.js') }}"></script>
+</body>
 
+
+</html>

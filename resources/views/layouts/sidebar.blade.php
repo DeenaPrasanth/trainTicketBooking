@@ -13,7 +13,7 @@
 <div class="menu">
     <div class="menu-header">
         <a href="index.html" class="menu-header-logo">
-            <img src="https://vetra.laborasyon.com/assets/images/logo.svg" alt="logo">
+            <!-- <img src="https://vetra.laborasyon.com/assets/images/logo.svg" alt="logo"> -->
         </a>
         <a href="index.html" class="btn btn-sm menu-close-btn">
             <i class="bi bi-x"></i>

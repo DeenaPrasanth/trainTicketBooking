@@ -324,11 +324,8 @@
 
     </div>
     <!-- /page content -->
-    @livewireScripts
-</body>
+   
 
-
-</html>
 
 <script>
     var message = "{{session()->get('message')}}";
@@ -357,6 +354,7 @@
    
     
 </script>
+@livewireScripts
 <script src="{{ asset('backend/assets/libs/charts/apex/apexcharts.min.js') }}"></script>
 <script src="{{ asset('backend/assets/js/buyer-dashboard.js') }}"></script>
 <script src="{{ asset('backend/assets/js/app.min.js') }}"></script>
@@ -376,3 +374,7 @@
 <!-- Prism -->
 <script src="{{ asset('backend/assets/libs/prism/prism.js') }}"></script>
 
+</body>
+
+
+</html>
